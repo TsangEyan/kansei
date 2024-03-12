@@ -1,0 +1,157 @@
+#Local-Workflow {
+
+}
+
+.local-img-container {
+    border: 1px solid rgba(204, 204, 204, 0.7);
+    border-radius: 9px;
+    background-color: rgba(248, 248, 248, 0.3);
+    width: 100%;
+    height: 65vh;
+    display: flex; /* 使用flex布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    overflow: hidden; /* 超出部分隐藏 */
+    position: relative;
+}
+
+#local-canvas {
+    position: absolute;
+}
+
+#imagePreview {
+    display: block; /* 用block替代none，以显示图片 */
+    max-width: 100%; /* 最大宽度为100% */
+    max-height: 65vh; /* 最大高度为65vh */
+    object-fit: contain; /* 保持宽高比缩放图片 */
+}
+
+
+.local-bottom-container {
+    display: flex;
+    max-height: 28vh;
+    margin-top: 5px;
+    justify-content: space-between;
+    padding-bottom: 5px;
+
+}
+
+.local-bottom-item {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.brush-container {
+    /*height: 100%;*/
+    width: 200px;
+    margin-right: 50px;
+}
+
+
+.brush-size-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    padding: 5px;
+    border-radius: 9px;
+}
+
+.brush-size-button {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.brush-size-button:focus {
+    outline: none;
+}
+
+.brush-size-display {
+    width: 50px; /* Fixed width */
+    height: 50px; /* Fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.brush-size-indicator {
+    width: 20px; /* Starting size, adjust as needed */
+    height: 20px; /* Starting size, adjust as needed */
+    background-color: purple;
+    border-radius: 50%;
+    transition: width 0.3s, height 0.3s; /* Smooth transition for size change */
+}
+
+#local-image-generate {
+    margin-top: 20px;
+}
+
+#local-image-clean {
+    margin-top: 20px;
+}
+
+
+
+.local-prompt-container {
+    /*height: 100%;*/
+    /*flex-grow: 2;*/
+    max-width: 30vh;
+    min-width: 30vh;
+}
+
+
+.prompt-textarea {
+    height: 90%;
+    width: 100%;
+    resize: none;
+    font-size: 15px;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 9px;
+    background: #f8f8f8;
+}
+
+.local-mix-img-container {
+    padding-left: 5vh;
+    min-width: 30vh;
+}
+
+.local-mix-img-container > img {
+    max-width: 25vh;
+    min-width: 25vh;
+}
+
+
+
+.local-img-box-container {
+    padding-top: 30px;
+    max-width: 300px;
+    min-width: 300px;
+    /*flex: 1; !* Take up remaining space *!*/
+    display: flex;
+    justify-content: flex-end; /* Align images to the right */
+}
+
+.local-img-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-rows: repeat(2, 1fr); /* 2 rows */
+    gap: 5px; /* Adjust gap between images */
+    align-items: center;
+    justify-items: center;
+    max-width: 85%; /* Adjust the max-width as per your design requirements */
+    /*max-height: 100%;*/
+    max-height: 15vh;
+}
+
+.local-img-box img {
+    width: 100%; /* Make images take full width of the grid cell */
+    height: auto; /* Keep aspect ratio */
+    object-fit: cover; /* Cover the grid cell without distorting aspect ratio */
+    max-width: 100%; /* Ensure it doesn't overflow */
+    max-height: 100%; /* Adjust height to fit within the container */
+}

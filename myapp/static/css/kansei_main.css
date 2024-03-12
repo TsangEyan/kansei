@@ -1,0 +1,342 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    /*height: 5rem;*/
+    min-height: 8vh;
+    background-color: #030621;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+/* 针对Webkit浏览器的滚动条样式 */
+::-webkit-scrollbar {
+    width: 2px;               /* 滚动条的宽度 */
+    height: 2px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;       /* 滚动条的背景色 */
+    border-radius:  4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #77799d;          /* 滚动条滑块的颜色 */
+    border-radius:  4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #77799d;          /* 滚动条滑块在鼠标悬停时的颜色 */
+}
+
+#contextMenu {
+    background-color: #fff;
+    border: 1px solid #ffa63b;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+#contextMenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#contextMenu ul li {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#contextMenu ul li:hover {
+    background-color: #fff7ec;
+}
+
+.logo {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+}
+
+
+.button-container {
+    justify-content: center;
+}
+
+button {
+    background: linear-gradient(to right, #BA49FF, #2D1CFF); /* Original Gradient background */
+    border: none; /* No border */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding around text and SVG */
+    text-align: center; /* Center the text */
+    display: inline-flex; /* Use flexbox for alignment */
+    align-items: center; /* Align items vertically */
+    justify-content: center; /* Center items horizontally */
+    font-size: 16px; /* Set font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 8px; /* Rounded corners */
+    transition-duration: 0.4s; /* Transition effect for hover */
+    font-family: sans-serif; /* Font family */
+    margin: 0 3px;
+}
+
+button:hover {
+    background: linear-gradient(to right, #b863f1, #4839ef); /* Lighter Gradient background on hover */
+}
+
+button .icon {
+    margin-right: 8px; /* Margin between SVG icon and text */
+}
+
+.container {
+    display: flex;
+    min-height: 92vh;
+    max-width: 100%;
+
+}
+
+/*sidebar*/
+.sidebar {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 10px;
+    /*max-width: 300px;*/
+    min-width: 20vh;
+    border-right: 1px solid #eeeeee;
+}
+
+.sidebar-header {
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.navigation-container {
+    margin-bottom: 20px;
+}
+
+.navigation-item {
+    padding: 10px;
+    margin: 10px 0;
+    height: 120px;
+}
+
+.navigation-item-active {
+    border: 2px dashed #cccccc; /* Style for the dashed border */
+    border-radius: 10px; /* Adjust the border-radius as you like */
+    background-color: #f8f8f8f8;
+}
+
+
+.navigation-text {
+    font-weight: bold;
+}
+
+hr {
+    border: none;
+    border-top: 1.5px solid rgba(204, 204, 204, 0.60);
+    margin: 15px 10px;
+}
+
+/*Global-Sidebar*/
+/*Quick Intructions*/
+/* Hide scrollbar for Chrome, Safari and Opera */
+.quick-instructions-list::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+.quick-instructions-list {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.quick-instructions-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px; /* 设置最大高度，您可以根据实际需求调整这个值 */
+    overflow-y: auto; /* 当内容超出最大高度时，提供垂直滚动条 */
+}
+
+.quick-instructions-item {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+
+.quick-instructions-item-description {
+    display: none;
+    color: #666666;
+    font-size: 14px;
+}
+
+.quick-instructions-item-title::before {
+    content: '•';
+    font-size: 20px;
+    color: black;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+/*Comparative-Sidebar*/
+/*comparative-filter*/
+
+
+/*Local-Sidebary*/
+/*Modification History*/
+/* Hide scrollbar for Chrome, Safari and Opera */
+.history-img-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+.history-img-container {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.history-img-container {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px; /* 设置最大高度，您可以根据实际需求调整这个值 */
+    overflow-y: auto; /* 当内容超出最大高度时，提供垂直滚动条 */
+}
+
+.history-item {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+
+.content {
+    flex: 4;
+    transition: margin-right 0.3s ease; /* 平滑过渡 */
+    padding: 20px;
+    min-width: 80vh;
+    max-height: 92vh;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#Global-Workflow {
+    background-color: #F5F5F5;
+}
+
+#Comparative-Workflow {
+    background-color: #c1f1c7;
+}
+
+
+
+
+/*sidebar-right*/
+.sidebar-right {
+    max-height: 92vh;
+    flex: 1;
+    background-color: #ffffff;
+    padding: 10px;
+    min-width: 30vh;
+    border-left: 1px solid #eeeeee;
+    transition: width 0.3s ease; /* 折叠和展开的平滑过渡 */
+    overflow-y: auto; /* 当内容超出最大高度时，提供垂直滚动条 */
+    scrollbar-width: none;
+}
+
+
+.global-gen-img-container {
+    height: 40%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.checkboxes-container {
+    min-height: 30vh;
+    max-height: 160px;
+    overflow-y: auto; /* 当内容超出最大高度时，提供垂直滚动条 */
+}
+
+.check-box {
+    margin: 0 10px 10px 10px;
+    padding: 5px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    display: flex;
+}
+
+.check-box > input {
+    margin-right: 3px;
+
+}
+
+.check-box > textarea {
+    max-height: 20px;
+    font-size: 13px;
+    resize: none;
+    border: 0;
+    outline: none;
+    border-radius: 8px;
+    padding-top: 3px;
+}
+
+
+.prompt-box > textarea {
+    width: 100%;
+    height: 20vh;
+    resize: none;
+    font-size: 15px;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    background: #f8f8f8;
+}
+
+.gen-button-container {
+    justify-content: center;
+    display: flex;
+    margin-top: 5px;
+}
+
+.feature-button-container > button {
+    font-size: 10px;
+    padding: 13px 0;
+}
+
+.gen-button-container > button {
+    width: 100%;
+}
+
+
+.image-box {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start; /* 修改为flex-start，以便容器内的项目从顶部开始排列 */
+    flex-wrap: wrap; /* 允许多行 */
+    width: 100%;
+    overflow-y: auto; /* 允许垂直滚动 */
+}
+
+.image-box > img {
+    margin: 10px;
+    flex: 0 0 calc(40% - 20px); /* 无论容器宽度如何，每张图片都尝试占据50%（减去20px的边距） */
+    max-height: 105px; /* 设置最大高度以适应容器高度，保留一些边距 */
+    object-fit: cover; /* 保持图片的纵横比 */
+    border: 1px solid #cccccc; /* Style for the dashed border */
+}
+
+
